@@ -1,2 +1,8 @@
-export Calendar from './components/Calendar';
-export DatePicker, { outsideClickIgnoreClass } from './components/DatePicker';
+import Calendar from './components/Calendar';
+import DatePicker from './components/DatePicker';
+
+
+export {
+    Calendar,
+    DatePicker
+}

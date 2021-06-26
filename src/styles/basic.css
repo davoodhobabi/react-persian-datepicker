@@ -1,16 +1,20 @@
+
 .calendarContainer {
   border-radius: 3px;
-  box-shadow: 0 3px 10px #dbdbdb;
-  border: 1px solid #cccccc;
+  box-shadow:0px 0px 60px rgba(66, 36, 110, 0.12);
+  border-radius:16px;
   width: 300px;
   margin: auto;
   text-align: center;
   padding: 10px;
   background-color: #fff;
 }
-
+.tether-element{
+  z-index: 1000000;
+}
 .calendarContainer * {
   box-sizing: border-box;
+  color:#534667;
 }
 
 .calendarContainer .dayPickerContainer:after,
@@ -29,10 +33,10 @@
 }
 
 .calendarContainer .heading > button {
-  border-radius: 3px;
+  border-radius: 8px;
   background: none;
+  border: none;
   margin: 5px 0;
-  border: 1px solid #F7F7F7;
   text-align: center;
   line-height: 30px;
   width: 36px;
@@ -41,7 +45,7 @@
 }
 
 .calendarContainer .heading > button:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(41, 175, 189, 0.2);
 }
 
 .calendarContainer .heading > span {
@@ -66,10 +70,10 @@
   height: 32px;
   font-size: 1em;
   margin: 5px 0;
-  border: 1px solid #F7F7F7;
   text-align: center;
   display: inline-block;
   font-weight: normal;
+  border-radius: 8px;
 }
 
 /* Day wrapper styles */
@@ -88,20 +92,22 @@
   height: 36px;
   border-radius: 3px;
   cursor: pointer;
+  border-radius: 8px;
+  color:#534667;
 }
 
 .calendarContainer .dayWrapper button:hover {
-  background-color: #eeeeff;
+  background-color: rgba(41, 175, 189, 0.2);
 }
 
 .calendarContainer .dayWrapper button[disabled] {
-  color: #aaa;
+  color: #B6ADC2;
   cursor: not-allowed;
-  background-color: #ebebeb;
+  background-color: #CCC6D5;
 }
 
 .calendarContainer .dayWrapper button.selected {
-  background-color: #337ab7;
+  background-color: #29AFBD;
   color: #ffffff;
 }
 
@@ -111,7 +117,7 @@
 
 /* Days of week row */
 .calendarContainer .daysOfWeek {
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #ECEAEF;
   margin-bottom: 5px;
   padding-bottom: 5px;
   display: flex;
@@ -121,6 +127,8 @@
 .calendarContainer .daysOfWeek > div {
   flex-grow: 1;
   justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Month selector portion */
@@ -133,16 +141,17 @@
   width: 33.33333332%;
   height: 25%;
   float: right;
-  border: 1px solid #F9F9F9;
+  border: none;
   outline: none;
   font-size: 1em;
   background: #fff;
   padding: 10px 0;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .calendarContainer .monthsList button:hover {
-  background: #eeeeee;
+  background: rgba(41, 175, 189, 0.2);
   cursor: pointer;
 }
 
@@ -151,6 +160,7 @@
 .calendarContainer .selected button:hover,
 .calendarContainer .selected button:active,
 .calendarContainer .selected button:focus {
-  background-color: #337ab7;
-  color: #ffffff;
+  background-color: #29AFBD;
+  color: #ECEAEF;
+  border-radius: 8px;
 }

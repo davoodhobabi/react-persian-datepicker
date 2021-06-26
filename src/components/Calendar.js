@@ -31,7 +31,6 @@ export class Calendar extends Component {
   };
 
   static defaultProps = {
-    styles: require('../styles/basic.css'),
     containerProps: {}
   };
 
@@ -133,7 +132,7 @@ export class Calendar extends Component {
         {children}
         <DaysViewHeading styles={styles} month={month}/>
         <DaysOfWeek styles={styles}/>
-        <div className={styles.dayPickerContainer}>
+        <div className={styles ? styles.dayPickerContainer: "dayPickerContainer"}>
           {
             days.map(day => {
               const isCurrentMonth = day.format('jMM') === month.format('jMM');
@@ -171,7 +170,7 @@ export class Calendar extends Component {
     const { mode } = this.state;
 
     return (
-      <div className={styles.calendarContainer + ' ' + className}>
+      <div className={(styles ? styles.calendarContainer :"calendarContainer" ) + ' ' + className}>
         { mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays() }
       </div>
     );

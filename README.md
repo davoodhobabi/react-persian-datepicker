@@ -9,6 +9,15 @@
 <p dir="rtl">
 <strong>React Persian Date Picker</strong> مجموعه‌ای از کامپوننت‌های ReactJS مورد نیاز جهت ایجاد ورود و نمایش تاریخ هجری شمسی است. این نرم‌افزار متن‌باز در ایوند توسعه یافته‌است.
 </p>
+<p dir="rtl">
+این همان دیت پیکر ایوند هستش با این تفاوت که شما باید فایل استایل را دستی ایمپورت کنید 
+</p>
+<p dir="rtl">
+در این ورژن شما لازم ندارید که پراپس استایل رو پاس بدید و این پراپس اختیاری هست 
+</p>
+<p dir="rtl">
+ورژن اصلی این دیت پیکر روی next ارور میده که اونم فیکس شده
+</p>
 
 <p dir="rtl">
   <a href="https://evandhq.github.io/react-persian-datepicker">نسخه نمایشی را اینجا ببینید.</a>
@@ -19,7 +28,12 @@
 Use npm to install the package:
 
 ```
-npm install react-persian-datepicker --save
+npm install fixed-persian-datepicker --save
+```
+
+```
+import "fixed-persian-datepicker/lib/styles/basic.css"
+
 ```
 
 # Usage
@@ -31,7 +45,7 @@ Below is a basic example.
 
 ```es6
 import React from 'react';
-import { Calendar, DatePicker } from 'react-persian-datepicker';
+import { Calendar, DatePicker } from 'fixed-persian-datepicker';
 
 const MyComponent = () => (
   <div>

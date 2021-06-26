@@ -18,23 +18,23 @@ export default class MonthsViewHeading extends Component {
     const { year, styles } = this.props;
 
     return (
-        <div className={styles.heading}>
-        <span className={styles.title}>
+        <div className={styles ? styles.heading : "heading"}>
+        <span className={styles ? styles.title : "title"}>
           { persianNumber(year.format('jYYYY')) }
         </span>
           <button
             type="button"
             title="سال قبل"
-            style={styles.navButton}
-            className={styles.prev}
+            style={styles ? styles.navButton :"navButton"}
+            className={styles ? styles.prev : "prev"}
             onClick={this.props.onPrevYear}
             dangerouslySetInnerHTML={rightArrow}
             />
           <button
             type="button"
             title="سال بعد"
-            style={styles.navButton}
-            className={styles.next}
+            style={styles ? styles.navButton :"navButton"}
+            className={styles ? styles.next :"next"}
             onClick={this.props.onNextYear}
             dangerouslySetInnerHTML={leftArrow}
             />

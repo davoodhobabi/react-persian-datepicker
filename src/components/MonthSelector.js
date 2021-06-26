@@ -67,15 +67,15 @@ export default class MonthSelector extends Component {
           onNextYear={this.nextYear.bind(this) }
           onPrevYear={this.prevYear.bind(this) }
         />
-        <div className={styles.monthsList}>
+        <div className={styles ? styles.monthsList : "monthsList"}>
           {
             months.map((name, key) => {
               const buttonFingerprint = (key + 1) + '-' + year.format('jYYYY');
               const selectedMonthFingerprint = selectedMonth.format('jM-jYYYY');
               const isCurrent = selectedMonthFingerprint === buttonFingerprint;
 
-              const className = classnames(styles.monthWrapper, {
-                [styles.selected]: isCurrent
+              const className = classnames((styles ? styles.monthWrapper : "monthWrapper"), {
+                [styles ? styles.selected : "selected"]: isCurrent
               });
 
               return (

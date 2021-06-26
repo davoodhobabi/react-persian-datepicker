@@ -40,9 +40,9 @@ export default class Day extends Component {
   render() {
     const { day, disabled, selected, isCurrentMonth, onClick, styles, ...rest } = this.props;
 
-    const className = classnames(styles.dayWrapper, {
-      [styles.selected]: selected,
-      [styles.currentMonth]: isCurrentMonth
+    const className = classnames((styles ? styles.dayWrapper : "dayWrapper"), {
+      [styles ? styles.selected : "selected"]: selected,
+      [styles ? styles.currentMonth : "currentMonth"]: isCurrentMonth
     });
 
     return (

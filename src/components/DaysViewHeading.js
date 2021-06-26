@@ -26,21 +26,21 @@ export default class Heading extends Component {
     const { month, styles } = this.props;
 
     return (
-      <div className={styles.heading}>
-        <button className={styles.title} onClick={this.handleMonthClick.bind(this)}>
+      <div className={styles ? styles.heading : "heading"}>
+        <button className={styles ? styles.title :"title"} onClick={this.handleMonthClick.bind(this)}>
           { persianNumber(month.format('jMMMM jYYYY')) }
         </button>
         <button
           type="button"
           title="ماه قبل"
-          className={styles.prev}
+          className={styles ? styles.prev :"prev"}
           onClick={prevMonth}
           dangerouslySetInnerHTML={rightArrow}
         />
         <button
           type="button"
           title="ماه بعد"
-          className={styles.next}
+          className={styles ? styles.next : "next"}
           onClick={nextMonth}
           dangerouslySetInnerHTML={leftArrow}
         />

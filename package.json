@@ -1,13 +1,14 @@
 {
-  "name": "react-persian-datepicker",
-  "version": "3.0.2",
+  "name": "fixed-persian-datepicker",
+  "version": "3.0.3",
   "description": "Persian calendar and date picker components for React",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development webpack-dev-server --hot --inline --content-base ./examples",
+    "dev": "set NODE_ENV=development webpack-dev-server --hot --inline --content-base ./examples",
     "webpack": "NODE_ENV=production webpack",
-    "babel": "babel src --out-dir lib --ignore /examples && cp src/styles lib -rf",
+    "babel-linux": "babel src --out-dir lib --ignore /examples && cp src/styles lib -rf",
+    "babel": "babel src --out-dir lib --ignore /examples && if exist lib\\styles (  rd lib\\styles /s /q  && md lib\\styles && copy src\\styles\\*.* lib\\styles ) else ( md lib\\styles && copy src\\styles\\*.* lib\\styles ) ",
     "prepublish": "npm run babel"
   },
   "repository": {
